@@ -8,7 +8,7 @@
 ](#table-of-contents-)
 - [1 Introduction](#1-introduction)
 - [2 Human body surface model](#2-human-body-surface-model)
-  * [2.1 Softwares and model format](#2.1-softwares-and-model-format)
+  * [2.1 Softwares and model format](#2-1-softwares-and-model-format)
   * [2.2 Creation of a generic (template) body surface model](#2.2-creation-of-a-generic-(template)-body-surface-model)
   * [2.3 Change anthropometry of the generic model](#2.3-change-anthropometry-of-the-generic-model)
   * [2.4 Workflow of the scaling process](#2.4-workflow-of-the-scaling-process)
