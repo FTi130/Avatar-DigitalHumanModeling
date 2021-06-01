@@ -40,6 +40,7 @@ Research on digital human models first began in the 1980s for the purpose of cre
 **Figure 1.** Jack Screenshot **Credit [Link](https://www.plm.automation.siemens.com/plmapp/education/jack/en_us/free-software/student)**
 
 Many multinational companies have a wide distribution of users around the world, and they will optimize their products locally for specific markets. In a usual product development process, before product release, ergonomic testing always a good option to help product designers assess the experience of the new product. However, to conduct ergonomic testing, it is necessary to find specific target users which need to cover the percentile of anthropometric data. This is not easy for most companies to achieve. Although software such as Jack is available to assist with analysis, but such software is often not intuitive enough to obtain a subjective experience from a first-person perspective.
+
 With the development of VR technology and the digital human technology, we can solve the above problem very well. VR technology can give the test user an immersive experience. Digital human technology can generate mannequins of different sizes and populations, so one user can experience the perspective of different populations. In addition, we can capture the human movements with a motion capture system and hand over the data to the biomechanical analysis software like Opensim for analysis. Predictably, this workflow solves the pain point of screening test users and brings quantifiable data to support ergonomic testing.
 
 # 2 Human body surface model
@@ -49,11 +50,13 @@ This section focuses on the creation of human surface models and how to create g
 ## 2.1 Softwares and model format
 
 In general, all the modeling software can be used to create the human body surface, but these softwares supports different formats export. Therefore, in order to choose the right modeling software, the first thing is to consider the compatibility of the development engine which is going to be used for making the virtual environment. Typically, most development engines (Unity, UnReal, Babylon.js, Three.js) support mesh models, Therefore, if the 3D modeling software supports the export of mesh types, there will be no problems with the subsequent development. What exactly is a mesh model? Mesh models use vertices, edges, and faces to form polygons such as triangles and quadrilaterals to represent complex 3D shapes. Unlike solid models, mesh models have no mass information.
+
 The popular modeling software that can be used for creating 3D human models are Blender, Makehuman, Maya, 3Ds Max, Mudbox, ZBrush. Modeling software commonly used in the industry world can also be used to create simple human surface models, such as SOLIDWORKS, CREO, CATIA, NX, Parasolid. But since most of the software on the upper list is commercial software, the accessibility of them is not easy, therefore going with an open-source solution might save many resources. Blender is a powerful open-source modeling tool that covers all modeling processes, modeling, rigging, animation, simulation, rendering, compositing, even for complex tasks like motion tracking, video editing, and 2D animation it also helps. In this thesis, most of the works were done with Blender.
 
 ## 2.2 Creation of a generic (template) body surface model
 
 Before creating a generic human body template, we needed to summarise the requirements for making a human body surface, and in interviews with many designer friends, a lot of useful feedback was gathered. 1. The human body template should be easily scalable so that after designers have obtained the anthropometric data of the target user, they can easily scale the various parts of the human body according to the data. 2. Clear body joints to allow designers to place skeletal joints 3. follow a common human hierarchy to ensure the readability of the model. There are already many freely available mannequins on the internet and I searched for some of them as a reference before making the model, also to prevent rebuilding the wheel.
+
 Two of the models on Sketchfab and Grabcad basically fit the requirements. Ybot is a mannequin template used on Mixamo, which distinguishes each body segment and has more clearly defined joints. But its design language is so exaggerated that it would become strange if it were to be scaled. For comparison, the model found on Grabcad has a clean design language, but you can see that the design of the joints on Grabcad is rigid and inflexible. Therefore the new model will be created with reference to the clean design language and using simple sphere shapes to give more flexibility to the joints.
 
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/01Ybot.png" alt="drawing" width="600"/><img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/02Grabcad.png" alt="drawing" width="600"/>
@@ -87,6 +90,7 @@ The diagram below shows the dimensions of the generic human body. You can see th
 ## 2.5 Change posture and movement of the scaled body surface model
 
 After obtaining the scaled human body surface model, we then need to use Blender's armature function to give the model movement. From desktop research, there are several ways to give movement to a virtual human model: Keyframing, Procedural Animation, Physically-Based Animation, Motion Capture, Forward and Inverse Kinematics. For blender, it is easier to use its inverse kinematic function to create human movement, But for Opensim it only uses a motion capture system to create the movement of the human model. Therefore, for consistency throughout the workflow, the motion capture system is also used in Blender's workflow.
+
 One research (Zhou, 2008) summarised the motion tracking technologies into mainly three categories: non-visual, visual-based (e.g. marker and markerless based), or a combination of both. From research, also suggested the Inertial sensor is the most outstanding motion tracking technology so far, with high accuracy and compactness, fewer computation resources needed, and low price. We can also see that in general, Non-visual approaches are more efficient in computation, Visual based approach wins in the aspect of accuracy. For this project, we will be using an RGB-D camera-based markerless tracking solution. Kinect was chosen mainly because it provides good software support, which saves a lot of resources during the development process. It is also very cheap and easy to obtain.
 
 ## 2.6 Workflow of creating human model movements
@@ -94,8 +98,11 @@ One research (Zhou, 2008) summarised the motion tracking technologies into mainl
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/08MovementWorkFlow1.png](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/08MovementWorkFlow1.png)
 
 The diagram above shows a generic process for creating human movements in a blender which is divided into three main steps. 1 Motion capture and pre-processing 2. Processing skeletal data 3. Importing motion data to the body template.
+
 In the first step, the user will first record the subject’s movements using Kinect Studio and then use Kinect Animation Studio to convert the recorded data, resulting in an FBX file. However, the generated FBX file from Kinect Animation Studio is not supported by Blender, so we need to use Adobe FBX Converter to convert the exported FBX to FBX 2o13 format.
+
 In the second step, we need to open the Filter file from the toolkit and import the FBX 2013 file we have just generated, then go to the Scripting window in Blender and click on run. The Filter File will automatically adjust the name of the exported skeleton and finally, we need to save the Filter file. So what does the Filter file do? If you open the unprocessed FBX2013 file directly you will see that all the bones follow the naming convention like SkelXXXX:SkeletonName, where XXXX is a four-digit random number. In the later operations, the general idea of using the raw skeleton data is to “teach blender copy/link data (position rotation) to the target body joints/segments”. With the unique XXXX number from each motion capture session, Blender is not capable of recognizing them, therefore the filter file will remove the random number.
+
 Blender supports appending motion data from one file to another, for the third step, we can append the pre-processed data from the filter file to the template body surface model. The template file with two armatures inside. An input armature and a target armature. The input armature has the same skeleton hierarchy by comparing the filter file. The target armature copies/links the motion data from the input armature. We have to append the motion file to the input armature. However, sometimes, if we place the Kinect in a wrong angle or position, the imported animation will have a strange height and angle. The toolkit provides a controller for you to fix this problem, you can select the input armature and enter pose mode, in front of the skeleton, you will see the round shape controller. You can rotate and move the controller to change the entire skeleton of the skeleton. For more detailed operations, try to see the video below.
 
 # 3 Human musculoskeletal model
@@ -105,6 +112,7 @@ This section will briefly explain how to use Opensim for mulsculoskeletal scalin
 ## 3.1 Softwares and model format
 
 Opensim was chosen for modeling the human musculoskeletal system. OpenSim is a opensource software that allows a wide range of studies in the neuromusculoskeletal system, including analysis of walking dynamics, studies of sports performance, simulations of surgical procedures, analysis of joint loads, design of medical devices, and animation of human and animal movement. It provided a shared platform for accessing the musculoskeletal system. There are many existing models available in the repository ready for use. An Opensim model made from different components can be different according to the different purposes of the simulation, for instance, for simulating human walking, the joint mainly specifies the articulations at the pelvis, hip, knee, and ankle joints, etc.
+
 An OpenSim model typically in .OSIM suffix can be used to represent body structures such as bodies, joints, and muscles. Thanks to the graphical interface, the human body can be easily modeled in detail through it, if you have knowledge of anatomy and biomechanics.
 
 ## 3.2 Selected generic musculoskeletal model
@@ -114,6 +122,7 @@ As modeling human musculoskeletal models require a lot of knowledge of anatomy, 
 ## 3.3 Change anthropometry of the musculoskeletal model
 
 In Opensim, the process of modifies the anthropometry data of a model is called scaling, Scaling is typically performed by comparing experimental marker data to virtual markers placed on a model, In OpenSim, the scaling step adjusts both the mass properties, as well as the dimensions of the body segments.
+
 In order to run a scaling process, three input is required: The first is a Generic model provided by Opensim, depends on the different research purposes, the musculoskeletal structures can vary from each model, the picture here shows a model designed for gait analysis, so we can see it more focused on lower limb part. The second input file is the Marker files in trc suffix, it is usually several seconds of data with the subject posed in a static position. The last file required for scaling is the setup file for the Scale Tool, a file to teach Opensim how to compare the virtual markers to match experimental marker locations captured from the subject. With these three files, the anthropometry of the generic model will match the anthropometry of the particular subject.
 
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/09opensimscale.png](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/09opensimscale.png)
@@ -123,6 +132,7 @@ About the three inputs of the scaling process: a generic model, a marker file, a
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/10opensimscale1.png" alt="drawing" width="400"/>
 
 There are three requirements for placing the markers: 1. at least place three markers to track the position and orientation of a particular body segment. 2. better to place markers in anatomical locations with the least skin and muscle movement. 3. reference markers set provided by Opensim can be used. For the scaling process, requirements 1 and 3 are not important for now, the second requirement is crucial for adopting the 1D anthropometric data in the scaling process.
+
 Where are the anatomical locations of the human body? Or in another term bony landmarks. The bony landmark is any place on the skin surface where the underlying bone is normally close to the surface and easily palpable. The picture below illustrates the bony landmarks of the human body.
 
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/11humanlandmarks.jpeg](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/11humanlandmarks.jpeg)
@@ -149,6 +159,7 @@ The diagram above shows the simple process of using Toolkit. The first step is t
 ## 3.5 Change posture and movement of the musculoskeletal model
 
 In Opensim, the function for creating human movements is called Inverse Kinematics (IK). This tool uses experimental data from each time period to create coherent human movements by positioning the model in the pose that 'best matches' the experimental Marker and coordinating data for that time period. The final output of the IK process is an MOT file, meaning motion files, the motion can be used for another OpenSim model, with the same marker set. Opensim's IK tool will use a set of algorithms to obtain the pose with the least error, and we need to assign different weights to the Marker in Opensim's IK configuration files to help Opensim to perform the calculations. In general, to perform an IK activity we need the following inputs: a generic full-body musculoskeletal model of the human. A marker file with a .trc suffix, which is usually a set of markers obtained from a motion capture system (sample like the file in the scaling process). Finally, the configuration file which weights each marker. With these three files, we can perform Inverse Kinematics operations on the generic musculoskeletal model in Opensim.
+
 But since Kinect is a markerless motion capture system, we do not have access to the coordinates of the real Marker in the human body, and it seems that we cannot perform Inverse Kinematics operations. However, this problem can be solved by reviewing the raw Kinect data and it is not hard to see that the raw data defines the change in position of each joint in space. In the diagram below, there are 25 body joints defined. So if we look at these joints as real markers which are placed on the body, we can perform IK activities through Opensim. (which means place OpenSim markers inside the musculoskeletal model) As can be expected, this approach is not 100% anatomically correct, but it can provide us with basic human movement data. In addition, our scaling model is derived from anthropometric data, so that the accuracy of scaling process of the human body during the IK activity is not very important to us.
 
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/15KinectSkeleton.png" alt="drawing" width="400"/>
@@ -165,7 +176,9 @@ However, the position of the Kinect joints cannot be used directly in Opensim, b
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/18MovementWorkFlow2.png" width="600"/>
 
 The diagram above shows a basic Inverse Kinematic process, divided into three main steps, the first step is to acquire the Kinect raw data, the second step is to export the Kinect raw data to an Opensim Marker (.trc) file. The final step is to perform IK operations in Opensim.
+
 In the first step, we will use a software called "LSL-KinectV2", which is an open-source motion capture software that can store Kinect data in a CSV file. If there is other software that can export Kinect raw data, feel free to use it.
+
 In the second step, we need to use the excel tool provided to convert the acquired Kinect raw data into a marker file that Opensim can recognize. The main purpose of the excel tool is to convert the coordinate system of the Kinect data, and make an output that Opensim can recognize.
 
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/19FolderStructure.png" width="300"/>
@@ -177,12 +190,15 @@ Finally, once we have the converted Kinect data in the .trc file, we can perform
 ## 4.1 Remote movements analysis experiment
 
 Colleagues from the University of Belgrade also have Kinect sensors in their lab, so we planned a small experiment to explore the possibilities of remote analysis. The procedure was for the colleagues from Belgrade to record a piece of Kinect motion data and send it to the lab in Milan. The students in Milan tried to reproduce the action in Opensim.
+
 The data sent from Belgrade was stored in Matlab files, so we designed a script to convert the MATLAB data to CSV data, then flowed exactly the designed workflow about inverse kinematics. Worth mentioning that the data in Matlab followed a common hierarchy of Kinect skeleton data, with a total of 21 joints defined. But without the thumb and hand tip data, because they are not reliable in Kinect, therefore in the Opensim Scale&IK configuration file we need to delete relevant information about thumb and hand tip data.
+
 The end result of the experiment was a general success, but the Inverse Kinematic results were rather odd as the data eventually obtained was not accurate due to the complex environment during the preliminary data collection. Therefore we have also summarised some key points when using Kinect for data collection: 1. For getting more reliable data, we can measure the subject’s pelvis height and place the Kinect at the same height. 2. Keep the Kinect parallel to the ground. 3. Make sure the subject always moves in the area that Kinect can detect. 4. Record FPS data
 
 ## 4.2 Automated anthropometric data modification in VR
 
 There are some pain points in the current workflow. First, the current workflow of changing anthropometry of the virtual human is lacking automation, users need to record the anthropometry data to the toolkit and then manually do the scaling process. Second, with the current workflow, users can only use the defined human template, after the VR scene is running, we can not change the anthropometry data of the human model template.
+
 The students from France have explored modeling in VR and from their work we can see there are good opportunities to optimize this project. The work made by Grenoble showed the possibility to link anthropometry data with a 3D model. Therefore the workflow can be fully automated. With the capability to modify models in VR, we can dynamically change the anthropometry of each body segment in real-time, rather than using a predefined human model template.
 
 # 5 Future works
