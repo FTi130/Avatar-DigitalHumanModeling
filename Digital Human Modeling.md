@@ -1,6 +1,7 @@
 # Digital Human Modelling
 
 **Author**: Tao Zhu
+
 **Email**: [tao.zhu@mail.polimi.it](mailto:tao.zhu@mail.polimi.it)
 
 # Table of Contents
