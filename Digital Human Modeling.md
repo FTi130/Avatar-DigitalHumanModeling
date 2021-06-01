@@ -200,7 +200,10 @@ There are limitations to Kinect tracking, with a significant quality drop of bod
 
 # 6 References
 
-6.0.0.1 Mochimaru, M. (2017). Digital Human Models for Human-Centered Design. Journal of Robotics and Mechatronics, 29(5), 783–789. [https://doi.org/10.20965/jrm.2017.p0783](https://doi.org/10.20965/jrm.2017.p0783)
-6.0.0.2 Mochimaru, M. (2017). Digital Human Models for Human-Centered Design. Journal of Robotics and Mechatronics, 29(5), 783–789. [https://doi.org/10.20965/jrm.2017.p0783](https://doi.org/10.20965/jrm.2017.p0783)
-6.0.0.3 Segen’s Medical Dictionary. (2011). Bony landmark | definition of bony landmark by Medical dictionary. [https://medical-dictionary.thefreedictionary.com/bony+landmark](https://medical-dictionary.thefreedictionary.com/bony+landmark)
-6.0.0.4 Zhou, H., & Hu, H. (2008). Human motion tracking for rehabilitation-A survey. Biomedical Signal Processing and Control, 3(1), 1–18. [https://doi.org/10.1016/j.bspc.2007.09.001](https://doi.org/10.1016/j.bspc.2007.09.001)
+Mochimaru, M. (2017). Digital Human Models for Human-Centered Design. Journal of Robotics and Mechatronics, 29(5), 783–789. [https://doi.org/10.20965/jrm.2017.p0783](https://doi.org/10.20965/jrm.2017.p0783)
+
+Mochimaru, M. (2017). Digital Human Models for Human-Centered Design. Journal of Robotics and Mechatronics, 29(5), 783–789. [https://doi.org/10.20965/jrm.2017.p0783](https://doi.org/10.20965/jrm.2017.p0783)
+
+Segen’s Medical Dictionary. (2011). Bony landmark | definition of bony landmark by Medical dictionary. [https://medical-dictionary.thefreedictionary.com/bony+landmark](https://medical-dictionary.thefreedictionary.com/bony+landmark)
+
+Zhou, H., & Hu, H. (2008). Human motion tracking for rehabilitation-A survey. Biomedical Signal Processing and Control, 3(1), 1–18. [https://doi.org/10.1016/j.bspc.2007.09.001](https://doi.org/10.1016/j.bspc.2007.09.001)
