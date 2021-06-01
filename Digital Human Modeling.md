@@ -6,7 +6,7 @@
 # Table of Contents
 - [Table of Contents
 ](#table-of-contents-)
-- [1 Introduction](#introduction)
+- [1 Introduction](#1-introduction)
 - [2 Human body surface model](#human-body-surface-model)
   * [2.1 Softwares and model format](#softwares-and-model-format)
   * [2.2 Creation of a generic (template) body surface model](#creation-of-a-generic-(template)-body-surface-model)
@@ -30,7 +30,7 @@
   * [5.3 Improve the accuracy of human movement results](#improve-the-accuracy-of-human-movement-results)
 - [6 References](#references)
 
-# 1 Introduction
+# 1-Introduction
 
 Research on digital human models first began in the 1980s for the purpose of creating a body template for design drafting. With the development of computer-aided design software, human templates were transformed digitally. The digital human body template usually has the following characteristics: 1. has different dimensions and can be used to represent different human races 2. can be used to simulate the movement of the human body 3. can be used for quantitative evaluation of human-machine interaction. (Mochimaru, 2017) There are a number of commercial software packages available to support the creation of digital human models, such as Jack and Ramsis, which are often used by companies experts or researchers who are familiar with ergonomics. To use these softwares, usually, the first step is identifying the target user (persona in the human-centered design process), then determining the anthropometric data of the human model based on the target population. After the human model is complete, body movements of the model are then created in a virtual environment, either by inverse kinematics of each body segment or by using a motion capture system. The whole movements represented by the virtual human can then be analyzed in detail by the software, e.g., Reachable areas, viewable areas, joint angles, time spent on the whole movement, etc. However, these softwares can only keep the analysis at a body surface level. Luckily, the new generation of digital body software like Anybody, Santos, can already support the in-depth analysis of the musculoskeletal system, introducing a biomechanical basis for the usability assessment.
 
