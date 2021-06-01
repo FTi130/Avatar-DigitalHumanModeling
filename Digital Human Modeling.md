@@ -136,11 +136,11 @@ As you can see from the picture above, the selected bony landmarks were marked o
 
 As anthropometric scaling in Opensim is a tedious process, not only about creating marker files but also needs to set up the correct virtual markers to be placed on the virtual human model, as well as the scaling configuration files. These files make the scaling operations incredibly cumbersome for the average user, so a simple toolkit has been created that allows users to quickly perform scaling operations when using the Dined anthropometric database. However, there are limitations to this toolkit; if some data is missing/not found from the anthropometric database, or if the data is defined differently, then the scaling process will not work and need to be redesigned from the beginning.
 
-<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/13Scalingworkflow2.png" alt="drawing" width="200"/>
+<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/13Scalingworkflow2.png" alt="drawing" width="600"/>
 
 The diagram above shows the simple process of using Toolkit. The first step is the same as scaling a human surface model, selecting the target population, gender, age, data, and percentile. Then the data is entered into the excel toolkit, which is “anthropometry2trc.xlsx”  In this Excel file, the user can enter the specified anthropometric data and the file will automatically generate marker parameters. The generated marker parameters then need to be copied into the ScalefakeMarkerFile.trc.
 
-<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/14FolderStructure.png" alt="drawing" width="200"/>
+<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/14FolderStructure.png" alt="drawing" width="300"/>
 
 “scale-markers.xml” and “ScaleConfiguration.xml” files are pre-defined templates and do not need to be modified. The user only needs to load the generic model “FullBody-Template.osim” and open the scale function in Opensim & load ScaleConfiguration.xml, then change the body mass of the target population. Finally, perform scaling. For a better understanding of this process, please see the video below.
 [Video]
@@ -167,7 +167,7 @@ The diagram above shows a basic Inverse Kinematic process, divided into three ma
 In the first step, we will use a software called "LSL-KinectV2", which is an open-source motion capture software that can store Kinect data in a CSV file. If there is other software that can export Kinect raw data, feel free to use it.
 In the second step, we need to use the excel tool provided to convert the acquired Kinect raw data into a marker file that Opensim can recognize. The main purpose of the excel tool is to convert the coordinate system of the Kinect data, and make an output that Opensim can recognize.
 
-<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/19FolderStructure.png" width="200"/>
+<img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/19FolderStructure.png" width="300"/>
 
 Finally, once we have the converted Kinect data in the .trc file, we can perform an inverse kinematic operation; the IK operation can generate a Motion file (.mot) which can be loaded into any size musculoskeletal model for biomechanical analysis. However, it is important to note that in order to make the IK results more accurate, we need to perform another scaling operation based on the Kinect data before the IK operation. First, load the generic human model and then turn on the scaling function. Load the IKScale.xml file, modify the mass data and click on the “run” button. After getting the scaled model, we can select the scaled model and turn on the inverse kinematic function, then load the IKConfiguration.xml file. Click on Run, then Opensim will start the IK operation. When the IK process is over you will find a motion file in the file path you assigned before. Before proceeding to the next step about analysis, first, the model previously scaled according to anthropometric data needs to be loaded and then the motion file needs to be loaded onto the scaled model too.
 
