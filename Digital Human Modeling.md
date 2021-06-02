@@ -11,14 +11,14 @@
 - [2 Human body surface model](#2-human-body-surface-model)
   * [2.1 Softwares and model format](#2.1-softwares-and-model-format)
   * [2.2 Creation of a generic (template) body surface model](#2.2-creation-of-a-generic-(template)-body-surface-model)
-  * [2.3 Change anthropometry of the generic model](#2.3-change-anthropometry-of-the-generic-model)
+  * [2.3 Change body proportion of the generic model](#2.3-change-anthropometry-of-the-generic-model)
   * [2.4 Workflow of the scaling process](#2.4-workflow-of-the-scaling-process)
   * [2.5 Change posture and movement of the scaled body surface model](#2.5-change-posture-and-movement-of-the-scaled-body-surface-model)
   * [2.6 Workflow of creating human model movements](#2.6-workflow-of-creating-human-model-movements)
 - [3 Human musculoskeletal model](#3-human-musculoskeletal-model)
   * [3.1 Softwares and model format](#3.1-softwares-and-model-format)
   * [3.2 Selected generic musculoskeletal model](#3.2-selected-generic-musculoskeletal-model)
-  * [3.3 Change anthropometry of the musculoskeletal model](#3.3-change-anthropometry-of-the-musculoskeletal-model)
+  * [3.3 Change body proportion of the musculoskeletal model](#3.3-change-anthropometry-of-the-musculoskeletal-model)
   * [3.4 Workflow of the scaling process](#3.4-workflow-of-the-scaling-process)
   * [3.5 Change posture and movement of the musculoskeletal model](#3.5-change-posture-and-movement-of-the-musculoskeletal-model)
   * [3.6 Workflow of the inverse kinematic process in Opensim](#3.6-workflow-of-the-inverse-kinematic-process-in-opensim)
@@ -65,7 +65,7 @@ The final model created is shown below and as can be seen, the template model fo
 
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/03GenericModel.png](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/03GenericModel.png)
 
-## 2.3 Change anthropometry of the generic model
+## 2.3 Change body proportion of the generic model
 
 In order to be able to test ergonomic factors in a virtual scene using a generic template model, we need to scale the body parts of the mannequin. The scaling process requires anthropometric data input. Therefore, we first need to select a reliable source to get these data, and in this thesis, I use an online tool provided by TU Delft: Dined, it is an online anthropometric toolkit that aims to help designers to explore, compare and utilize anthropometric data in an effortless way. Support anthropometry data of Dutch, Italian, American, and more.
 
@@ -123,9 +123,9 @@ An OpenSim model typically in .OSIM suffix can be used to represent body structu
 
 As modeling human musculoskeletal models require a lot of knowledge of anatomy, I did not choose to model by myself but rather chose open-source models that are already in the Opensim repository. The chosen models focus on the whole body, not in particular body segments, and here I found two models which are available. The first one was provided by Andrea Menegolo. [https://simtk.org/projects/ulb_project](https://simtk.org/projects/ulb_project). The second one was provided by Apoorva Rajagopal. [https://simtk.org/projects/full_body](https://simtk.org/projects/full_body) The examples in this document were carried out using models provided by Apoorva Rajagopal.
 
-## 3.3 Change anthropometry of the musculoskeletal model
+## 3.3 Change body proportion of the musculoskeletal model
 
-In Opensim, the process of modifies the anthropometry data of a model is called scaling, Scaling is typically performed by comparing experimental marker data to virtual markers placed on a model, In OpenSim, the scaling step adjusts both the mass properties, as well as the dimensions of the body segments.
+In Opensim, the process of modifies the anthropometric data of a model is called scaling, Scaling is typically performed by comparing experimental marker data to virtual markers placed on a model, In OpenSim, the scaling step adjusts both the mass properties, as well as the dimensions of the body segments.
 
 In order to run a scaling process, three input is required: The first is a Generic model provided by Opensim, depends on the different research purposes, the musculoskeletal structures can vary from each model, the picture here shows a model designed for gait analysis, so we can see it more focused on lower limb part. The second input file is the Marker files in trc suffix, it is usually several seconds of data with the subject posed in a static position. The last file required for scaling is the setup file for the Scale Tool, a file to teach Opensim how to compare the virtual markers to match experimental marker locations captured from the subject. With these three files, the anthropometry of the generic model will match the anthropometry of the particular subject.
 
