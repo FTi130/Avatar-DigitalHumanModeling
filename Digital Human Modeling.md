@@ -75,17 +75,19 @@ Typically anthropometric data were collected in several positions, for example, 
 
 ## 2.4 Workflow of the scaling process
 
-The final scaling workflow is shown in the diagram above, with the first step - selection. First, select the target populations, gender and age range. This is followed by the selection of the target segment’s data. This step can be done by referencing the data provided in the template excel tool, or if a more detailed database is available, it can be adjusted in a more complete way. Finally, select the percentile of the target data. Typically, the P5, P50, P95 data are preferable. Once the required data has been selected, it is time to generate the dimensions of the body parts. This step mainly involves entering the selected data into the excel tool, which will then automatically generate the data for each body segment in a graphical way. The final scaling step can be carried out in any modeling software, here it is recommended to use Blender, select the individual body parts and scale them according to the dimensions.
-
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/05ScalingWorkflow1.png" alt="drawing" width="600"/>
 
-The table below shows the selected data. This table contains a lot of inputs, which is then the inputs will be rearranged and given in the form of a graph showing the data for each body part. The image below shows an example of dutch male adults, from age 20 to 60 in percentile 50, all the numbers in the graph are in mm. It is worth noting that the anthropometric data collection process does not provide detailed data for all parts/joints of the body, such as the ankle, and knee heights, which are in many cases missing. This form could be better optimized to provide more detailed data if the databases were more comprehensive.
+The final scaling workflow is shown in the diagram above, with the first step - selection. First, select the target populations, gender and age range. This is followed by the selection of the target segment’s data. This step can be done by referencing the data provided in the template excel tool, or if a more detailed database is available, it can be adjusted in a more complete way. Finally, select the percentile of the target data. Typically, the P5, P50, P95 data are preferable. Once the required data has been selected, it is time to generate the dimensions of the body parts. This step mainly involves entering the selected data into the excel tool, which will then automatically generate the data for each body segment in a graphical way. The final scaling step can be carried out in any modeling software, here it is recommended to use Blender, select the individual body parts and scale them according to the dimensions.
+
+The table below shows the selected data. This table contains a lot of inputs, which is then the inputs will be rearranged and given in the form of a graph showing the data for each body part. The image below shows an example of dutch male adults, from age 20 to 60 in percentile 50, all the numbers in the graph are in mm. It is worth noting that the anthropometric data collection process does not provide detailed data for all parts/joints of the body, such as the ankle, and knee heights, which are in many cases missing. This form could be better optimized to provide more detailed data if the databases were more comprehensive. Check the video below to see demonstration about the workflow.
 
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/06DataInput.png](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/06DataInput.png)
 
 The diagram below shows the dimensions of the generic human body. You can see that for the width of the human body the data is mainly focused on the height and there is less information on the width. This is also due to the issue that the anthropometric data is not comprehensive.
 
 ![https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/07HumanDimensions.png](https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/07HumanDimensions.png)
+
+[https://youtu.be/95Tki_K4O6A](https://youtu.be/95Tki_K4O6A)
 
 ## 2.5 Change posture and movement of the scaled body surface model
 
@@ -104,6 +106,8 @@ In the first step, the user will first record the subject’s movements using Ki
 In the second step, we need to open the Filter file from the toolkit and import the FBX 2013 file we have just generated, then go to the Scripting window in Blender and click on run. The Filter File will automatically adjust the name of the exported skeleton and finally, we need to save the Filter file. So what does the Filter file do? If you open the unprocessed FBX2013 file directly you will see that all the bones follow the naming convention like SkelXXXX:SkeletonName, where XXXX is a four-digit random number. In the later operations, the general idea of using the raw skeleton data is to “teach blender copy/link data (position rotation) to the target body joints/segments”. With the unique XXXX number from each motion capture session, Blender is not capable of recognizing them, therefore the filter file will remove the random number.
 
 Blender supports appending motion data from one file to another, for the third step, we can append the pre-processed data from the filter file to the template body surface model. The template file with two armatures inside. An input armature and a target armature. The input armature has the same skeleton hierarchy by comparing the filter file. The target armature copies/links the motion data from the input armature. We have to append the motion file to the input armature. However, sometimes, if we place the Kinect in a wrong angle or position, the imported animation will have a strange height and angle. The toolkit provides a controller for you to fix this problem, you can select the input armature and enter pose mode, in front of the skeleton, you will see the round shape controller. You can rotate and move the controller to change the entire skeleton of the skeleton. For more detailed operations, try to see the video below.
+
+[https://youtu.be/dvPksW7wE4M](https://youtu.be/dvPksW7wE4M)
 
 # 3 Human musculoskeletal model
 
@@ -154,7 +158,8 @@ The diagram above shows the simple process of using Toolkit. The first step is t
 <img src="https://raw.githubusercontent.com/Antoni950425/Avatar-DigitalHumanModeling/main/03%20Pictures/14FolderStructure.png" alt="drawing" width="300"/>
 
 “scale-markers.xml” and “ScaleConfiguration.xml” files are pre-defined templates and do not need to be modified. The user only needs to load the generic model “FullBody-Template.osim” and open the scale function in Opensim & load ScaleConfiguration.xml, then change the body mass of the target population. Finally, perform scaling. For a better understanding of this process, please see the video below.
-[Video]
+
+[https://youtu.be/OtJ0xLTnhBA](https://youtu.be/OtJ0xLTnhBA)
 
 ## 3.5 Change posture and movement of the musculoskeletal model
 
