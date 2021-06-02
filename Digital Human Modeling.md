@@ -185,7 +185,7 @@ In the second step, we need to use the excel tool provided to convert the acquir
 
 Finally, once we have the converted Kinect data in the .trc file, we can perform an inverse kinematic operation; the IK operation can generate a Motion file (.mot) which can be loaded into any size musculoskeletal model for biomechanical analysis. However, it is important to note that in order to make the IK results more accurate, we need to perform another scaling operation based on the Kinect data before the IK operation. First, load the generic human model and then turn on the scaling function. Load the IKScale.xml file, modify the mass data and click on the “run” button. After getting the scaled model, we can select the scaled model and turn on the inverse kinematic function, then load the IKConfiguration.xml file. Click on Run, then Opensim will start the IK operation. When the IK process is over you will find a motion file in the file path you assigned before. Before proceeding to the next step about analysis, first, the model previously scaled according to anthropometric data needs to be loaded and then the motion file needs to be loaded onto the scaled model too.
 
-<video id="video" controls="" preload="none" poster="#">
+<video id="video" controls="" preload="none">
       <source id="mp4" src="https://media.githubusercontent.com/media/Antoni950425/Avatar-DigitalHumanModeling/main/02%20Videos/Tutorial%204-Create%20movement%20for%20musculoskeletal%20model.mp4" type="video/mp4">
       <p>Your user agent does not support the HTML5 Video element.</p>
 </video>
