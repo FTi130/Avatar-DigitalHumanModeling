@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c004d7e1-f1e8-4659-94ee-24875e817e46" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/01 Body Surface Model/Anthropometry2Dimension.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/01 Body Surface Model/Human-Template.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/01 Body Surface Model/MocapDataFilter.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/01 Body Surface Model/Motiontracking-Template.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/1-Scale/Anthropometry2TRC.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/1-Scale/ScaleConfiguration.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/1-Scale/ScalingFakeMarkerFile.trc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/1-Scale/scale-markers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/2-IK/IK-markers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/2-IK/IKConfiguration.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/2-IK/IKFakeMarkerFile.trc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/2-IK/IKScale.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/2-IK/KinectData2TRC.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/FullBody-Template.osim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/capitate_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/capitate_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hamate_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hamate_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hat_jaw.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hat_ribs_scap.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hat_skull.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/hat_spine.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/humerus_lv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/humerus_rv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_distal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_distal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_medial_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_medial_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_proximal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/index_proximal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_bofoot.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_femur.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_fibula.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_foot.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_patella.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_pelvis.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_talus.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_tibia.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/l_tibia_SOMEINVERTEDFACES.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_distal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_distal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_medial_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_medial_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_proximal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/little_proximal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/lunate_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/lunate_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal1_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal1_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal2_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal2_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal3_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal3_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal4_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal4_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal5_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/metacarpal5_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_distal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_distal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_medial_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_medial_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_proximal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/middle_proximal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/pisiform_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/pisiform_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_bofoot.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_femur.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_fibula.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_foot.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_patella.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_pelvis.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_talus.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_tibia.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/r_tibia_SOMEINVERTEDFACES.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/radius_lv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/radius_rv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_distal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_distal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_medial_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_medial_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_proximal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ring_proximal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/sacrum.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/scaphoid_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/scaphoid_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/thumb_distal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/thumb_distal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/thumb_proximal_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/thumb_proximal_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/trapezium_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/trapezium_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/trapezoid_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/trapezoid_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/triquetrum_lvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/triquetrum_rvs.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ulna_lv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/02 Musculoskeletal Model/Geometry/ulna_rv.vtp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Toolkit/Softwares List.md" beforeDir="false" afterPath="$PROJECT_DIR$/00 Toolkit/Softwares List.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01 Presentations/Digital Human Modeling Presentation.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02 Videos/Tutorial 1-Change anthropometry of Body Surface Model.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02 Videos/Tutorial 2-Create movement for Body Surface Model.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02 Videos/Tutorial 3-Change anthropometry of musculoskeletal model.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02 Videos/Tutorial 4-Create movement for musculoskeletal model.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/00Jack.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/01Ybot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/02Grabcad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/03GenericModel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/04Dined.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/05ScalingWorkflow1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/06DataInput.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/07HumanDimensions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/08MovementWorkFlow1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/09opensimscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/10opensimscale1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/11humanlandmarks.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/12humanlandmarks2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/13Scalingworkflow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/14FolderStructure.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/15KinectSkeleton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/16KinectCoordinateSystem1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/17KinectCoordinateSystem2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/18MovementWorkFlow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 Pictures/19FolderStructure.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avatar Deliverable Poster Template.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Avatar Deliverable Poster Template.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Digital Human Modeling.md" beforeDir="false" afterPath="$PROJECT_DIR$/Digital Human Modeling.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tWfQy1Y6H9x6GllsIlyoTlvnna" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c004d7e1-f1e8-4659-94ee-24875e817e46" name="Default Changelist" comment="" />
+      <created>1622889757940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622889757940</updated>
+      <workItem from="1622889760138" duration="3025000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
