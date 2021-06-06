@@ -15,11 +15,11 @@ From the other side, we consider more precise (also more difficult) approach for
 
 This section will focus on the first approach to create a human model. There are software and pipelines described.
 Let us define general steps to create a model that can be represented in a digital environment:
-1- Mesh modeling, here the main mesh of the human-like model is defined.
-2- Scaling
-3- Topology optimization
-4- Rigging
-5- Exporting
+1. Mesh modeling, here the main mesh of the human-like model is defined.
+2. Scaling
+3. Topology optimization
+4. Rigging
+5. Exporting
 
 I will go through some of this steps using several software packages that is used in a real-world production.
 
