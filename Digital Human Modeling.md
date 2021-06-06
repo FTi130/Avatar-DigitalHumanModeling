@@ -79,11 +79,11 @@ You can find some example stored as .fbx, .dae and .obj files in the folder 01. 
 
 I consider .glb/.gltf formats separately, because this is not a standart data transfer format for CG and modeling. Glb format was created to optimize the usage of 3D models in Web environments. Last years, web 3D was developing fast and popular engines were created to create static and dynamic 3D scenes. The leaders so far are Three.js and Babylon.js. These engines (I also call it libraries below) have many possibilities and able to work directly with .obj files. However,  .glb format is optimized for working with WebGL environments. The difference between glb and gltf is in the view of the data inside. When .glb format store the data in a binary code, .gltf is using JSON representation. JSON allows to store the data in a human-readable format that can be fit into existing databases. From the other side, files stored in .glb require less space on a disk.
 
-You can find reliable explanations of working with .glb files on the website of [https://www.khronos.org/blog/art-pipeline-for-gltf](Khronos Group).
+You can find reliable explanations of working with .glb files on the website of [Khronos Group](https://www.khronos.org/blog/art-pipeline-for-gltf).
 
 
 
-# 3 Human musculoskeletal model ([https://github.com/Antoni950425](Tao Zhu) part)
+# 3 Human musculoskeletal model. [https://github.com/Antoni950425](Tao Zhu) part
 
 This section will briefly explain how to use Opensim for mulsculoskeletal scaling and Inverse Kinematics. At the end of this part you should have a musculoskeletal model based on anthropometric data and an Opensim motion file based on Kinect raw data. These files can provide a good basis for later biomechanic analysis.
 
@@ -146,9 +146,9 @@ Finally, once we have the converted Kinect data in the .trc file, we can perform
 It was coordinated with my colleagues that in this report I will provide only several approaches. Feel free to access other information in reports of my colleagues.I will describe Kinect SDK and Computer Vision workflows for capturing human movements.
 Motion capturing, as well as model creation, is a well-known process for all spheres I mentioned above, such as CG or GameDev. There are many approaches and these years some more appear. I leave a system of marker based tracking and other special pipelines used in a high-ranking digital production.
 
-Focusing first on Kinect approach. Kinect (also known as Project Natal) was created by Microsoft and is a motion-sensing device that uses depth-sensing camera to understand a scene in front of it. There is a proprietary software embedded by Microsoft and they continuously develop this project also for their Hololens system. However, there is an open SDK that can be used for creating custom extensions. One of this developments I mentioned while working on one architectural project which included kinetic rooftop and responsive facades. The work of [https://github.com/hodgoong/grasshopper-kinect2](Hojoong Chung) allowed me to represent myself directly in Rhinoceros viewport.
+Focusing first on Kinect approach. Kinect (also known as Project Natal) was created by Microsoft and is a motion-sensing device that uses depth-sensing camera to understand a scene in front of it. There is a proprietary software embedded by Microsoft and they continuously develop this project also for their Hololens system. However, there is an open SDK that can be used for creating custom extensions. One of this developments I mentioned while working on one architectural project which included kinetic rooftop and responsive facades. The work of [Hojoong Chung](https://github.com/hodgoong/grasshopper-kinect2) allowed me to represent myself directly in Rhinoceros viewport.https://github.com/hodgoong/grasshopper-kinect2
 
-[https://www.youtube.com/watch?v=f3-3cMmveTI](Here) you can see an example of the result. This way of tracking is not the best in terms of precision. You can see in a video that some parts of the body are difficult to track, also the view angle of Kinect restricts motions of a person.
+[Here](https://www.youtube.com/watch?v=f3-3cMmveTI) you can see an example of the result. This way of tracking is not the best in terms of precision. You can see in a video that some parts of the body are difficult to track, also the view angle of Kinect restricts motions of a person.
 
 
 Last year company ARPM Design and Research presented different approach that involves Xbox and several ML algorithms. You can find it [food4rhino.com/en/app/catwalk/](here).
@@ -161,9 +161,8 @@ Last year company ARPM Design and Research presented different approach that inv
 ## 5.1 The Idea
 Previous part discussed creation of musculoskeletal model. It included usage of OpenSim – specific software package used for ergonomic analysis. However, the representation of muscles and joints of a human body represented as parametric geometries. This fact suggested me to look to what I am doing in the sphere of architecture and design. Namely, it seems to be possible to use parametric modeling and its software to represent models of a human in a similar logic as OpenSim does it but using only 3D software and Python. This part is a theoretical proposal. 
 The software I choose are Rhinoceros and Grasshopper.
-In previous part I described a process of motion capturing using Kinect SDK and real-time representation in Rhinoceros using Grasshopper. As you could see on the video, the body is represented as simple geometries – lines and spheres. Initially, I changed lines representation to a tube representation for my legs and arms. Using instruments of Grasshopper, I am able to work with this geometries in a way I need based on a simple structure provided by Kinect. This make me think of combining this approach with instruments used for tension and structure analysis in architecture. Such plugins as [https://www.food4rhino.com/en/app/kangaroo-physics](Kangaroo) or [https://www.food4rhino.com/en/app/karamba3d](Karamba) can be used to represent and analyze geometries as joints and muscles the same way it is done in OpenSim.
-So far, without Kinect itself it is difficult to create a prototype of this system, therefore, it is only a theoretical proposal. As future works it can be developed as a plugin for Grasshopper that could be place on [https://www.food4rhino.com/en](the official plugin source) 
-
+In previous part I described a process of motion capturing using Kinect SDK and real-time representation in Rhinoceros using Grasshopper. As you could see on the video, the body is represented as simple geometries – lines and spheres. Initially, I changed lines representation to a tube representation for my legs and arms. Using instruments of Grasshopper, I am able to work with this geometries in a way I need based on a simple structure provided by Kinect. This make me think of combining this approach with instruments used for tension and structure analysis in architecture. Such plugins as [Karamba](https://www.food4rhino.com/en/app/kangaroo-physics) or [Karamba](https://www.food4rhino.com/en/app/karamba3d) can be used to represent and analyze geometries as joints and muscles the same way it is done in OpenSim.
+So far, without Kinect itself it is difficult to create a prototype of this system, therefore, it is only a theoretical proposal. As future works it can be developed as a plugin for Grasshopper that could be place on [the official plugin source](https://www.food4rhino.com/en)
 
 # Conclusion
 
