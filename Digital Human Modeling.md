@@ -84,7 +84,7 @@ You can find reliable explanations of working with .glb files on the website of 
 
 
 
-# 3 Human musculoskeletal model. [https://github.com/Antoni950425](Tao Zhu) part
+# 3 Human musculoskeletal model. [Tao Zhu](https://github.com/Antoni950425) part
 
 This section will briefly explain how to use Opensim for mulsculoskeletal scaling and Inverse Kinematics. At the end of this part you should have a musculoskeletal model based on anthropometric data and an Opensim motion file based on Kinect raw data. These files can provide a good basis for later biomechanic analysis.
 
