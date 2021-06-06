@@ -34,7 +34,7 @@ Based on the experience of CG world, we can identify that most widespread format
 - .BVH - character animation file format was developed by Biovision, a defunct motion capture services company, to give motion capture data to customers. This format largely displaced an earlier format Biovision providing skeleton hierarchy information as well as motion data.
 - .dae - or Collada, is managed by the nonprofit technology consortium, the Khronos Group, and has been adopted by ISO as a publicly available specification, ISO/PAS 17506. COLLADA defines an open standard XML schema for exchanging digital assets among various graphics software applications that might otherwise store their assets in incompatible file formats. COLLADA documents that describe digital assets are XML files, usually identified with a .dae (digital asset exchange).
 
-.glb/gltf – 3D data format used for representation of 3D scene in web environments. AVATAR project also focuses on the web representation using Babylon.js, so these formats I will consider separately.
+- .glb/gltf – 3D data format used for representation of 3D scene in web environments. AVATAR project also focuses on the web representation using Babylon.js, so these formats I will consider separately.
 
 
 ## 2.2 Software
