@@ -21,7 +21,7 @@ Let us define general steps to create a model that can be represented in a digit
 4- Rigging
 5- Exporting
 
-We will go through some of this steps using several software packages. The
+I will go through some of this steps using several software packages that is used in a real-world production.
 
 ## 2.1 Formats and Software
 
