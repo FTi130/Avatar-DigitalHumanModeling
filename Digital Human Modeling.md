@@ -63,7 +63,7 @@ One of the main features of MakeHuman is a set of 4 rigging options. They vary b
 
 The final model created in a program can be exported in many formats.
 
-![Formats Available](/Avatar-HumanOperatorModeling/00 Toolkit/01 Body Surface Model/Formats.png)
+![Formats Available](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/00%20Toolkit/01%20Body%20Surface%20Model/Formats.png)
 
 ## 2.3 Scaling and Rigging
 
@@ -71,9 +71,10 @@ However, sometimes there are changes needed for a generated model. In this case 
 There are many ways the model can be loaded in Blender. Many formats can be used, but sometimes problems of scale or orientation appear. For me it was easier to fix all issues manually in Blender but there are several plugins that can help to work with the model normalization.
 
 Export from MakeHuman to Blender is not straightforward but pretty easy. After defining the model, we already can have pretty all the bones and meshes out from the box.
-Also, Make Human allows to create initiate Pose for your model.
-![]()
-![]()
+Also, Make Human allows to create initiate Pose for your model. You can also check if there is enough precision in the rigging system you have choosen.
+
+![Rendered Pose](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/RenderPose2.png)
+![Rigged Pose](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/Rig2.png)
 
 You can find some example stored as .fbx, .dae and .obj files in the folder 01. I used two different approaches to create a model of a male and female. Also, two models differ from each other by number of joints and by topologies. Based on the personal experience, the best format is .fbx. It creates less problems when exporting and importing between programs, also it allows to store all the data in a single file when .obj format needs to be supported by .mtl file storing materials data.
 
