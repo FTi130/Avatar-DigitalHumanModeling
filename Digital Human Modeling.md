@@ -76,6 +76,12 @@ Also, Make Human allows to create initiate Pose for your model. You can also che
 ![Rendered Pose](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/RenderPose2.png)
 ![Rigged Pose](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/Rig2.png)
 
+
+The level of precision that you can choose for a bones sysytem can be different. For example, having 163 artificial bones, it is possible to simulate facial expressions or finger movements. Of course, this is not physically-correct representation of how human body works. However, for many tasks this approximation is bearable and is widely used in most of the modern software.
+
+![Facial Expression Rendered](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/Expressions1.png)
+![Facial Expression Bones](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/02%20Pictures/Expression2.png)
+
 You can find some example stored as .fbx, .dae and .obj files in the folder 01. I used two different approaches to create a model of a male and female. Also, two models differ from each other by number of joints and by topologies. Based on the personal experience, the best format is .fbx. It creates less problems when exporting and importing between programs, also it allows to store all the data in a single file when .obj format needs to be supported by .mtl file storing materials data.
 
 I consider .glb/.gltf formats separately, because this is not a standart data transfer format for CG and modeling. Glb format was created to optimize the usage of 3D models in Web environments. Last years, web 3D was developing fast and popular engines were created to create static and dynamic 3D scenes. The leaders so far are Three.js and Babylon.js. These engines (I also call it libraries below) have many possibilities and able to work directly with .obj files. However,  .glb format is optimized for working with WebGL environments. The difference between glb and gltf is in the view of the data inside. When .glb format store the data in a binary code, .gltf is using JSON representation. JSON allows to store the data in a human-readable format that can be fit into existing databases. From the other side, files stored in .glb require less space on a disk.
