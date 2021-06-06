@@ -29,30 +29,30 @@ Considering this approach, we can rely on years of development inside the sphere
 First, let’s describe what we want to see as a result of our pipeline. We expect to have visually and logically precise model of a human. It means that the model should look like a human, be a size of a human and textured as a human.
 Based on the experience of CG world, we can identify that most widespread formats in which human models can be stored are following:
 
-.obj - geometry definition file format first developed by Wavefront Technologies for its Advanced Visualizer animation package.
-.fbx - proprietary file format (.fbx) developed by Kaydara and owned by Autodesk since 2006
-.BVH - character animation file format was developed by Biovision, a defunct motion capture services company, to give motion capture data to customers. This format largely displaced an earlier format Biovision providing skeleton hierarchy information as well as motion data.
-.dae - or Collada, is managed by the nonprofit technology consortium, the Khronos Group, and has been adopted by ISO as a publicly available specification, ISO/PAS 17506. COLLADA defines an open standard XML schema for exchanging digital assets among various graphics software applications that might otherwise store their assets in incompatible file formats. COLLADA documents that describe digital assets are XML files, usually identified with a .dae (digital asset exchange).
+- .obj - geometry definition file format first developed by Wavefront Technologies for its Advanced Visualizer animation package.
+- .fbx - proprietary file format (.fbx) developed by Kaydara and owned by Autodesk since 2006
+- .BVH - character animation file format was developed by Biovision, a defunct motion capture services company, to give motion capture data to customers. This format largely displaced an earlier format Biovision providing skeleton hierarchy information as well as motion data.
+- .dae - or Collada, is managed by the nonprofit technology consortium, the Khronos Group, and has been adopted by ISO as a publicly available specification, ISO/PAS 17506. COLLADA defines an open standard XML schema for exchanging digital assets among various graphics software applications that might otherwise store their assets in incompatible file formats. COLLADA documents that describe digital assets are XML files, usually identified with a .dae (digital asset exchange).
 
 .glb/gltf – 3D data format used for representation of 3D scene in web environments. AVATAR project also focuses on the web representation using Babylon.js, so these formats I will consider separately.
 
 
-# Software
+## 2.2 Software
 
 All software that we will consider in this part is very known not only among specialists in CG but also to many people that used to do any 3D modelling on a computer. Let us mention several software on a stage.
 At first, it is necessary to mention Blender. It is open-source package that can be used for literally all the steps needed to create a model. 
 However, the pipeline is usually spit between different software. The reason is that some of them are better for a particular step in a workflow. Of course, moving between software is a problem (it can be problem of scale, formats and other) but in a CG studio the workflow is usually a trade-off between using several programs. Let us consider some of them for each step of human modeling. This list if based on the assumptions of the author.
 
-1- Mesh Creation. Here the leaders are ZBrush (allows to create meshes in a sculpting mode and highly tuned for it), Blender and MakeHuman
-2- Texturing. Blender, MakeHuman
-3- Scaling. Blender 
-4- Rigging. Blender, MakeHuman
+1. Mesh Creation. Here the leaders are ZBrush (allows to create meshes in a sculpting mode and highly tuned for it), Blender and MakeHuman
+2. Texturing. Blender, MakeHuman
+3. Scaling. Blender 
+4. Rigging. Blender, MakeHuman
 
 Most of the formats and software, as it is usually in the modern world, were created by companies to solve a particular issue. Then these formats and (sometimes) software became open-source and de-facto (sometimes de-jure) standard for the sphere.
 
 I will consider approach which is so far the best according to the speed, precision and usability for full creation of a human model.
 
-## 2.2 Creation of a generic body surface model
+## 2.3 Creation of a generic body surface model
 
 There are several ways to start creating a model. Starting from manual mesh sculpting, where the user is free to create any shape or detail of a human body to more general approaches using pre-defined forms and shapes.
 The AVATAR case is not focusing on visually highly-detailed models. So, the approach was used cover a low-precision model. 
@@ -65,7 +65,7 @@ The final model created in a program can be exported in many formats.
 
 ![Formats Available](https://raw.githubusercontent.com/FTi130/Avatar-DigitalHumanModeling/main/00%20Toolkit/01%20Body%20Surface%20Model/Formats.png)
 
-## 2.3 Scaling and Rigging
+## 2.4 Scaling and Rigging
 
 However, sometimes there are changes needed for a generated model. In this case all changes can be made directly in 3D modelling software. I was using Blender and Rhinoceros during AVATAR project. Rhinoceros part will be mentioned later in this report. 
 There are many ways the model can be loaded in Blender. Many formats can be used, but sometimes problems of scale or orientation appear. For me it was easier to fix all issues manually in Blender but there are several plugins that can help to work with the model normalization.
